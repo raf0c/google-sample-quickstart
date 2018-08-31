@@ -205,6 +205,8 @@ public class MainActivity extends FragmentActivity implements
                     rebuildGoogleApiClient();
                     mGoogleApiClient.connect();
                     break;
+                 default:
+                    break;
             }
         }
     }
@@ -336,6 +338,8 @@ public class MainActivity extends FragmentActivity implements
                     // not called so we need to re-attempt connection here.
                     mGoogleApiClient.connect();
                 }
+                break;
+            default:
                 break;
         }
     }
