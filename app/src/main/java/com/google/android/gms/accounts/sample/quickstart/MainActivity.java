@@ -146,9 +146,6 @@ public class MainActivity extends FragmentActivity implements
                 .addOnConnectionFailedListener(this)
                 .addApi(Plus.API)
                 .addScope(new Scope(Scopes.PROFILE))
-                // TODO(developer): Specify any additional API Scopes or APIs you need here.
-                // The GoogleApiClient will ensure these APIs are available, and the Scopes
-                // are approved before invoking the onConnected callbacks.
                 .build();
     }
 
@@ -231,10 +228,6 @@ public class MainActivity extends FragmentActivity implements
         // for a Google Account to have the primary email address change.
 
         Person currentPerson = Plus.PeopleApi.getCurrentPerson(mGoogleApiClient);
-
-        // TODO(developer): Check the account ID against any previous login locally.
-        // TODO(developer): Delete the local data if the account ID differs.
-        // TODO(developer): Construct local storage keyed on the account ID.
 
         mStatus.setText(String.format(getResources().getString(R.string
                 .signed_in_as), currentPerson.getDisplayName()));
