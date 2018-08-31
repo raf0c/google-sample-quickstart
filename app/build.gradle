@@ -1,3 +1,7 @@
+plugins {
+    id "org.sonarqube" version "2.6.2"
+}
+
 apply plugin: 'com.android.application'
 
 android {
@@ -21,15 +25,6 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    // When including the Google Play Services library in your application you have two options:
-    // Option 1: Include all of Google Play services (enables better auto-complete), but you should
-    // be sure to use "minifyEnabled" on any APKs you upload to the Google Play store.
-    // compile 'com.google.android.gms:google-play-services:6.5.+'
-    // Option 2: Include lower level libraries if you are using Google Play services v6.5 or
-    // greater. A detail of the client libs can be found at https://goo.gl/jKNdLm.
-    // Note: If you use a service that has a specific client lib you DO NOT need to depend on
-    // the "base" lib as it is included transitively. The "base" lib is included below for
-    // documentation purposes but is not required in this sample's current configuration.
     implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
     implementation 'com.google.android.gms:play-services-base:15.0.1'
     implementation 'com.google.android.gms:play-services-identity:15.0.1'
